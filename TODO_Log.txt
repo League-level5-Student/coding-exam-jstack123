@@ -1,4 +1,5 @@
 File: src/Coding_Exam_B/classes/Camera.java
-File: src/Coding_Exam_B/classes/RayTracedImageViewer.java
-File: src/Coding_Exam_B/classes/RayTracer.java
-File: src/Coding_Exam_B/classes/Vector3.java
+11: //TODO: Create different perspectivesFile: src/Coding_Exam_B/classes/RayTracedImageViewer.java
+27: 		//TODO: Needs testingFile: src/Coding_Exam_B/classes/RayTracer.java
+29: 		//TODO: Create a SceneFile: src/Coding_Exam_B/classes/Vector3.java
+4: //TODO: Create a Vector4 class

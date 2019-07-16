@@ -28,26 +28,29 @@ public class CodingExamB {
 		String line = "";
 		int lineNum = 1;
 		try {
-		
-			for (int j = 1; j < 50; j++) {
-				BufferedReader br = new BufferedReader(new FileReader(fileName),j);
-				
-//				while(i != -1) {
-					i = br.read();
-					String readline = br.readLine();
+
+		//	for (int j = 1; j < 50; j++) {
+				BufferedReader br = new BufferedReader(new FileReader(fileName), 1);
+
+				String readline = br.readLine();
+//					System.out.println(readline);
+				while (readline != null) {
 					
-					if(readline.contains("//TODO")) {
-						line = lineNum + ": " + readline;
+					if (readline.contains("//TODO")) {
+						line += "" + lineNum + ": " + readline + "\n";
+
 					}
+					
+					readline = br.readLine();
 					lineNum++;
-					if(br.read()==-1) {
-						//check if bufferedreader is at null here
-					}
-				//}
-				
+//					System.out.println(readline);
+				}
+				lineNum = 1;
+
+//						//check if bufferedreader is at null here
+
 				br.close();
-			}
-		
+			//}
 
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
@@ -55,8 +58,9 @@ public class CodingExamB {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-
-		return fileLine + "\n" + line;
+		String finalString = fileLine + "\n" + line + "\n";
+		System.out.println(finalString);
+		return finalString;
 	}
 
 	public static void main(String[] args) {
@@ -71,12 +75,12 @@ public class CodingExamB {
 		 */
 		FileWriter fw;
 		try {
-			fw = new FileWriter("TODO_Log.txt");
-			
+			fw = new FileWriter("src/Coding_Exam_B/TODO_Log.txt");
+
 			fw.write(finalLogString);
-			
+
 			fw.close();
-			
+
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
