@@ -45,7 +45,7 @@ public class CodingExamA {
 					robot.setPenColor(Color.BLUE);
 				}
 				for (int j = 0; j < numSides; j++) {
-					robot.move(100);
+					robot.move(50);
 					int degree = 360/numSides;
 					robot.turn(degree);
 				}

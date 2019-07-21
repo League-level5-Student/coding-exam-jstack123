@@ -37,7 +37,7 @@ public class CodingExamB {
 				while (readline != null) {
 					
 					if (readline.contains("//TODO")) {
-						line += "" + lineNum + ": " + readline + "\n";
+						line += "" + lineNum + ": " + readline.trim() + "\n";
 
 					}
 					
@@ -58,6 +58,7 @@ public class CodingExamB {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+		
 		String finalString = fileLine + "\n" + line + "\n";
 		System.out.println(finalString);
 		return finalString;
